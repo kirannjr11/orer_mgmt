@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu and Cart</title>
+    <link rel="stylesheet" href="../css/menus.css"> <!-- Include your CSS styles -->
+</head>
+
+<body>
+  
+    
+    <h2>Menu</h2>
+    <div id="menuList">
+        <!-- Menu items will be dynamically added here -->
+    </div>
+
+    <h2>Your Cart</h2>
+    <div id="cartList">
+        <!-- Cart items will be dynamically added here as a table -->
+    </div>
+
+    <h3 id="totalPrice">Total Price: $0.00</h3> <!-- Display the total price -->
+
+    <!-- New Place Order Button -->
+    <div id="orderDetails">
+        <div>
+            <label for="userId">User ID:</label>
+            <input type="number" id="userId" placeholder="Enter your User ID" required>
+        </div>
+
+        <div>
+            <label for="tableId">Table Number:</label>
+            <input type="number" id="tableId" placeholder="Enter your Table Number" required>
+        </div>
+        <label for="orderstatus">Order Status:</label>
+        <select id="orderstatus" name="status">
+            <option value="CANCEL">CANCEL</option>
+            <option value="COMPLETE">COMPLETE</option>
+        </select>
+    </div>
+
+   
+    <!-- Add a field for Order ID -->
+    <div>
+        <label for="fetchOrderId">Order ID:</label>
+        <input type="number" id="fetchOrderId" placeholder="Enter Order ID">
+    </div>
+
+    <!-- Place Order Button -->
+    <button id="placeOrderBtn">Place Order</button>
+    <button id="updateOrderBtn">Update Order</button>
+    <button id="fetchOrderBtn">View Order</button>
+
+    <div id="logout">
+        <button id="lg" >Log Out</button>
+        <button id="new" class="newmenu" >Change Menu</button>
+    </div>
+
+
+    <script src="../js/menus.js"></script>
+    <script src="../js/order.js"></script>
+    <script src="../js/logout.js"></script>
+   
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const addMenuBtn = document.getElementById('new'); // Get the button with id 'new'
+
+            if (addMenuBtn) {
+                addMenuBtn.addEventListener('click', function () {
+                    const isOwner = confirm("Are you the owner of the restaurant? Only owners can change the menu.");
+                    if (isOwner) {
+                        window.location.href = 'addmenu.html';  // Redirect to addmenu.html
+                    } else {
+                        alert("Only the restaurant owner can change the menu.");
+                    }
+                });
+            } else {
+                console.error("Add menu button not found.");
+            }
+
+            const logoutBtn = document.getElementById('lg'); // Get the button with id 'lg' (Logout button)
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function () {
+                // Redirect to auth.html page when Logout is clicked
+                window.location.href = 'auth.html'; 
+            });
+        } else {
+            console.error("Logout button not found.");
+        }
+        });
+    </script>
+
+</body>
+</body>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+
+
+ #new {
+    background-color: orangered;
+}
+
+#lg {
+    background-color: orangered;
+}
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 50%; 
+    max-width: 200px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Specific Styling for Cart Buttons */
+.cart-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 0 5px; /* Add small margin between buttons */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.cart-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn {
+    background-color: #ff4b4b;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #e24343;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+table td {
+    vertical-align: middle; /* Center align content vertically */
+}
+
+
+/* Styling for Action Buttons in Table */
+button.table-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button.table-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+/* Styling for Minus, Plus, and Delete buttons in the cart */
+button.cart-action-btn {
+    padding: 5px;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+button.cart-action-btn:hover {
+    background-color: #45a049;
+}
+
+button.delete-action-btn {
+    background-color: #ff4b4b;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+button.delete-action-btn:hover {
+    background-color: #e24343;
+}
+
+/* Specific Flexbox Styling for Cart Items */
+.cart-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-item-name {
+    text-align: left;
+    padding-left: 10px;
+}
+
+
+
+#orderDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#orderDetails label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#orderDetails input, #orderDetails select {
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#orderDetails select {
+    -webkit-appearance: none; /* Remove the default appearance for better customization */
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+}
